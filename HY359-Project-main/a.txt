@@ -1,0 +1,7 @@
+<label>
+                {"library id :"+item.library_id} <button onClick={()=>{
+                  axios.get(`http://localhost:3001/student/${sessionStorage.getItem("user_id")}/${item.library_id}/borrow/${isbn}`).then(function (response) {
+                    console.log(response.data);
+                  })
+                }}>Rent from here?</button> 
+              </label>
